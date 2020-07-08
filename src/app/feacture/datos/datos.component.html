@@ -3,7 +3,7 @@
         <div class="col-sm-3 " *ngFor="let item of listCommerces">
           <div class="card border-primary">
             <img class="card-img-top" src="../../../assets/img/comercio.png" alt="Card image cap">
-            <div class="card-body">
+            <div class="card-body pb-3">
               <h5 class="card-title">
                 {{ item.name }}
               </h5>
@@ -12,9 +12,8 @@
                   <br> {{ item.days }} 
                   <br> {{ item.schedule }} 
                 </p>
-                <p class="card-text"> <strong> Contactanos: </strong> </p>
-                <p class="card-text"> Telefono:  {{ item.phone }} </p>
-                <p class="card-text"> Direccion: {{ item.address }} </p>
+                <br />
+                <a class="btn btn-outline-primary" (click)="mostrartContacto(item)"> <strong> Contactanos </strong> </a>
             </div>
             <div class="card-footer">
               <small class="text-muted"> 
