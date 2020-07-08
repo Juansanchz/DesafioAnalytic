@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
+  anio: number;
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.anio = new Date().getFullYear();
   }
 
   fixearPosicion() {
@@ -20,5 +22,4 @@ export class FooterComponent implements OnInit {
     }
     return false;
   }
-
 }

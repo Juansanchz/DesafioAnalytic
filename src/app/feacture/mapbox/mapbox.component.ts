@@ -12,7 +12,8 @@ import { Layer } from 'src/app/shared/models/layer';
 })
 export class MapboxComponent implements OnInit {
   map: Mapboxgl.Map;  
-  constructor(public commerceServices: CommerceServices) {}  
+  constructor(public commerceServices: CommerceServices) {}
+
   ngOnInit(): void {
     Mapboxgl.accessToken = environment.keyMapBox;
 
@@ -44,7 +45,7 @@ export class MapboxComponent implements OnInit {
     this.commerceServices.getLayer().subscribe((data: Layer) => {
       data.features.forEach((element: any) => {
         this.createMarker(element.geometry.coordinates[0], element.geometry.coordinates[1]);
-      })
+      });
     });
   }
-};
+}

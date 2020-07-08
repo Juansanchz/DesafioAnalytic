@@ -1,19 +1,30 @@
 <div class="col-sm-12">
     <div class="row card-group">
-        <div *ngFor="let item of listCommerces">
-            <div class="card mb-4" >
-                <div class="row no-gutters">
-                  <div class="card-header col-md-4">
-                    <strong> {{ item.name }} </strong> <br> NIT: {{ item.nit }} <br> Ventas: {{ item.sales }}
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <p class="card-text"> <strong> Horario de atención: </strong>  <br> {{ item.days }} <br> {{ item.schedule }} </p>
-                      <p class="card-text"><small class="text-muted">{{ item.owner }} <br> Tel: {{ item.phone }}</small></p>
-                    </div>
-                  </div>
-                </div>
+        <div class="col-sm-3 " *ngFor="let item of listCommerces">
+          <div class="card border-primary">
+            <img class="card-img-top" src="../../../assets/img/comercio.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">
+                {{ item.name }}
+              </h5>
+                <p class="card-text"> 
+                  <strong> Horario de atención: </strong>  
+                  <br> {{ item.days }} 
+                  <br> {{ item.schedule }} 
+                </p>
+                <p class="card-text"> <strong> Contactanos: </strong> </p>
+                <p class="card-text"> Telefono:  {{ item.phone }} </p>
+                <p class="card-text"> Direccion: {{ item.address }} </p>
             </div>
+            <div class="card-footer">
+              <small class="text-muted"> 
+                {{ item.owner }} 
+                <br>
+                <strong> NIT: </strong>
+                {{ item.nit }} 
+              </small>
+            </div>
+          </div>
         </div>
     </div>
 </div>
