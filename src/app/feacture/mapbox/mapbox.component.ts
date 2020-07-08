@@ -18,14 +18,18 @@ export class MapboxComponent implements OnInit {
 
     this.map = new Mapboxgl.Map({
       container: 'mapbox', // * Id del contenedor en el cual se visualizará el mapa
-      style: 'mapbox://styles/mapbox/streets-v11',
+      style: 'mapbox://styles/mapbox/streets-v11', //** Estilo del mapa
       center: [-74.10415649414062, 4.693457320237691], // * Posicion inicial del mapa [longitud, latitud]
       zoom: 10, // * Acercar el mapa
     });
-
     this.consultar();
   }
 
+  /**
+   * Crea los marker en el mapa de acuerdo a la latitud y longitud ingresadas por parametro
+   * @param lng Longitud
+   * @param lat Latitud
+   */
   createMarker(lng: number, lat: number) {
     const marker = new Mapboxgl.Marker({
       draggable: false,
@@ -40,7 +44,6 @@ export class MapboxComponent implements OnInit {
     this.commerceServices.getLayer().subscribe((data: Layer) => {
       data.features.forEach((element: any) => {
         this.createMarker(element.geometry.coordinates[0], element.geometry.coordinates[1]);
-        console.log(element.geometry.coordinates[0] + " : " + element.geometry.coordinates[1])
       })
     });
   }

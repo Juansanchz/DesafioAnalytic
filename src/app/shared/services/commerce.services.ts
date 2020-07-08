@@ -13,14 +13,14 @@ export class CommerceServices {
   }
 
   /**
-   * Funcion que obtiene todas las capas para cargar los puntos en el mapa
+   * Funcion que obtiene la ubicacion de cada establecimiento para cargar los puntos en el mapa
    */
   getLayer() {
     return this.http.get(apiCommerce + '/layer', httpOptions).pipe();
   }
 
   /**
-   * Funcion que obtiene los valores necesarios para realizar las graficas
+   * Funcion que obtiene las ventas de cada comercio
    */
   getGraph() {
     return this.http.get(apiCommerce + '/graph', httpOptions).pipe();
