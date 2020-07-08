@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { MapboxComponent } from './mapbox/mapbox.component';
+import { DatosComponent } from './datos/datos.component';
 
 @NgModule({
   declarations: [
-    DashboardComponent,
     MapboxComponent,
+    DatosComponent,
+  ],
+  imports: [
+    CommonModule
   ],
   exports: [
-    DashboardComponent,
-    MapboxComponent
+    MapboxComponent,
+    DatosComponent
   ],
 })
 export class FeactureModule { }

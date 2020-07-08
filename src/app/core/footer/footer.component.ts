@@ -12,4 +12,13 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  fixearPosicion() {
+    const historico = document.getElementById('contenido');
+    const height = historico.offsetHeight;
+    if (height < (screen.height * 0.7)) {
+      return true;
+    }
+    return false;
+  }
+
 }

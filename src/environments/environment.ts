@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  keyMapBox: 'pk.eyJ1IjoiamZyb2JveSIsImEiOiJja2NiZ2djZGgwNGR2MnlvOXd5Mnhwd29qIn0.TJnQn_-0-yjbIY3QohawXg'
+  keyMapBox: 'pk.eyJ1IjoiamZyb2JveSIsImEiOiJja2NiZ2djZGgwNGR2MnlvOXd5Mnhwd29qIn0.TJnQn_-0-yjbIY3QohawXg',
+  URL: 'https://alw-lab.herokuapp.com'
 };
 
 /*
