@@ -21,7 +21,7 @@
     "@angular/router": "~9.0.7",
     "@popperjs/core": "^2.4.4",
     "bootstrap": "^4.5.0",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "chartjs-plugin-datalabels": "^0.7.0",
     "fas": "^0.3.6",
     "jquery": "^3.5.1",
